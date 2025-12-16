@@ -70,7 +70,8 @@ function Questionnaire() {
     );
   }
 
-  return e('form', { onSubmit: handleSubmit },
+    return e('form', { onSubmit: handleSubmit },
+        e('h1', { style: { textAlign: 'center', marginBottom: '20px' } }, 'Анкета'), // Добавлен заголовок
     questions.map(q => {
       if (q.type === 'text') {
         return e('div', { key: q.id },
@@ -99,6 +100,17 @@ function Questionnaire() {
     )
   );
 }
+
+const QuestionRenderer = ({ question, onChange }) => {
+  switch (question.Type) {
+    case 'slider':
+      return e(SliderQuestion, { question, onChange });
+    case 'radio':
+      return e(RadioQuestion, { question, onChange });
+    default:
+      return e(TextInput, { question, onChange });
+  }
+};
 
 const domContainer = document.querySelector('#root');
 ReactDOM.createRoot(domContainer).render(e(Questionnaire));

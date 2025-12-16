@@ -9,9 +9,10 @@ namespace QuestionnaireApi.Controllers
     {
         private static readonly List<Question> _questions = new List<Question>
         {
-            new Question { Id = 1, Text = "Ваше имя?", Type = "text", Options = null },
-            new Question { Id = 2, Text = "Ваш возраст?", Type = "text", Options = null },
-            new Question { Id = 3, Text = "Ваш любимый цвет?", Type = "radio", Options = new List<string> { "Красный", "Синий", "Зеленый" } }
+            new Question { Id = 1, Text = "Р’Р°С€Рµ РёРјСЏ?", Type = "text", Options = null },
+            new Question { Id = 2, Text = "Р’Р°С€ РІРѕР·СЂР°СЃС‚?", Type = "text", Options = null },
+            new Question { Id = 3, Text = "Р’Р°С€ Р»СЋР±РёРјС‹Р№ С†РІРµС‚?", Type = "radio", Options = new List<string> { "РєСЂР°СЃРЅС‹Р№", "СЃРёРёРЅРёР№", "В«Р·РµР»РµРЅС‹Р№" } },
+            //new Question { Id = 4, Text = "РћС†РµРЅРёС‚Рµ СѓСЂРѕРІРµРЅСЊ РІР°С€РµРіРѕ СЃС‚СЂРµСЃСЃР° РѕС‚ 1 РґРѕ 10", Type = "slider", MinValue = 1, MaxValue = 10 }
         };
 
         private static readonly List<Answer> _answers = new List<Answer>();
